@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-maroon-950 dark:bg-maroon-950 dark:text-ivory transition-colors duration-300;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-white/90 dark:bg-maroon-900/60 backdrop-blur rounded-2xl border border-gold-200/60 dark:border-gold-700/30 shadow-soft transition-all hover:border-gold-400 hover:shadow-gold;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-maroon-600 to-gold-600 bg-clip-text text-transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-gold-300 rounded-full; }
+}
